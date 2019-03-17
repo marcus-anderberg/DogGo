@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Fab from '@material-ui/core/Fab';
 
 
-class Timer2 extends Component {
+class Timer extends Component {
 
 
 
@@ -22,4 +22,4 @@ class Timer2 extends Component {
     }
 }
 
-export default Timer2;
+export default Timer;

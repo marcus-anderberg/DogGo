@@ -15,26 +15,56 @@ class History extends Component {
         this.props.dispatch({ type: 'GET_WALKS' })
     }
 
-    // handleClick = id => () => {
-    //     console.log('id', id);
+    handleClick = id => () => {
+        console.log('id', id);
 
-    //     this.props.dispatch({ type: 'DELETE_ITEM', payload: id })
-    // }
+        this.props.dispatch({ type: 'DELETE_ITEM', payload: id })
+    }
+
+    doggieList() {
+
+        if (this.props.dogWalkReducer && this.props.dogWalkReducer.length > 0) {
+
+            return this.props.dogWalkReducer.map(results =>
+                <tr key={results.id}>
+                    <td> {results.walk_date} </td>
+                    <td> {results.time_elapsed} </td>
+                    <td>{results.ones}</td>
+                    <td>{results.twos}</td>
+                    <td><button onClick={() => this.deleteButton(results.id)} className="deleteButton">Delete</button></td>
+
+                </tr>
+            )
+        }
+    }
 
     render() {
-        console.log(this.props.dogWalkReducer.data);
+        console.log(this.props.dogWalkReducer);
 
 
         return (
-            <>
-                <ul>
-                    <li>
-                        {JSON.stringify(this.props.dogWalkReducer.data)}
-                        {/* {this.props.dogWalkReducer.map((dogs) => <li key={dogs.id}> {dogs.name} / {dogs.time_elapsed} / <button onClick={this.handleClick(dogs.id)}>Delete</button> </li>)} */}
-                    </li>
-                </ul>
 
-            </>
+            <div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Time</th>
+                            <th>Ones</th>
+                            <th>Twos</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {this.doggieList()}
+                    </tbody>
+
+                </table>
+
+
+
+            </div>
+
         )
     };
 }

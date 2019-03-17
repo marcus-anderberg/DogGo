@@ -8,7 +8,7 @@ momentDuration(moment);
  * GET route template
  */
 router.get('/', (req, res) => {
-    const queryText = 'SELECT "walk_date", "time_elapsed", "ones", "twos", "username" FROM "dogs" JOIN "user" ON "dogs"."user_ref_id" = "user"."id"'
+    const queryText = 'SELECT "walk_date", "time_elapsed", "ones", "twos", "username" FROM "dogs" JOIN "user" ON "dogs"."user_ref_id" = "user"."id" ORDER BY "walk_date" DESC'
     pool.query(queryText) 
     .then((result) => {
      for (let i = 0; i < result.rows.length; i++) {
@@ -18,7 +18,7 @@ router.get('/', (req, res) => {
        
      }
      res.send(result.rows) 
-     console.log(result.rows)
+    //  console.log(result.rows)
 
     })
     .catch((error) => {

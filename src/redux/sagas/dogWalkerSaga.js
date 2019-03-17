@@ -15,7 +15,7 @@ function* addWalk(action) {
 function* getWalks() {
     try {
        let dogWalkInfo = yield axios.get('api/dog')
-        yield put({type: 'SET_WALKS', payload: dogWalkInfo})
+        yield put({type: 'SET_WALKS', payload: dogWalkInfo.data})
     } catch (error) {
         console.log('Error with user registration:', error);
 

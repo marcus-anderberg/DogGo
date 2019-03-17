@@ -6,6 +6,9 @@ import { Link } from 'react-router-dom';
 // this could also be written with destructuring parameters as:
 // const UserPage = ({ user }) => (
 // and then instead of `props.user.username` you could use `user.username`
+
+
+
 const UserPage = (props) => (
   <>
     <div>
@@ -15,7 +18,7 @@ const UserPage = (props) => (
       {/* <p>Your ID is: {props.user.id}</p> */}
       {/* <LogOutButton className="log-in" /> */}
       <Link to="/walk">
-      <img src="../images/doge2.png" className="doge" alt="" />
+        <img onClick={() => console.log('wooooof')} src="../images/doge2.png" className="doge" alt="" />
       </Link>
 
     </div>

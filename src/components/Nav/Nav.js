@@ -21,17 +21,17 @@ const Nav = (props) => (
       {props.user.id && (
         <>
           <Link className="nav-link" to="/walk">
-           Walk
+            Walk
           </Link>
           {/* Always show this link since the about page is not protected */}
           <Link className="nav-link" to="/history">
             History
-      </Link>
+           </Link>
           <LogOutButton className="nav-link" />
         </>
       )}
-    
-     
+
+
     </div>
   </div>
 );
