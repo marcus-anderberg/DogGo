@@ -22,9 +22,22 @@ function* getWalks() {
     }
 }
 
+function* deleteItem(action) {
+    try {
+        console.log('post item', action.payload);
+        yield axios.delete('api/dog/' + action.payload);
+        yield put({ type: 'GET_WALKS' });
+    } catch (error) {
+        console.log('this was an error with the delete');
+
+    }
+}
+
+
 function* dogWalkerSaga() {
     yield takeLatest('ADD_WALK', addWalk);
     yield takeLatest('GET_WALKS', getWalks);
+    yield takeLatest('DELETE_ITEM', deleteItem)
 }
 
 export default dogWalkerSaga;

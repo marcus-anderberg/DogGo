@@ -110,7 +110,7 @@ h2 {
 }
 
 table {
-  font-family: arial, sans-serif;
+  font-family: 'Roboto Mono', monospace;
   border-collapse: collapse;
   width: 100%;
 
@@ -125,4 +125,10 @@ td, th {
 
 tr:nth-child(even) {
   background-color: #dddddd;
+}
+
+.deleteButton {
+  border-radius: 5px;
+  font-family: 'Roboto Mono', monospace;
+
 }

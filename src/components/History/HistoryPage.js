@@ -15,24 +15,25 @@ class History extends Component {
         this.props.dispatch({ type: 'GET_WALKS' })
     }
 
-    handleClick = id => () => {
-        console.log('id', id);
-
+    deleteButton = id => () => {
+        console.log('id:', id);
         this.props.dispatch({ type: 'DELETE_ITEM', payload: id })
     }
 
     doggieList() {
-
         if (this.props.dogWalkReducer && this.props.dogWalkReducer.length > 0) {
-
-            return this.props.dogWalkReducer.map(results =>
-                <tr key={results.id}>
-                    <td> {results.walk_date} </td>
-                    <td> {results.time_elapsed} </td>
-                    <td>{results.ones}</td>
-                    <td>{results.twos}</td>
-                    <td><button onClick={() => this.deleteButton(results.id)} className="deleteButton">Delete</button></td>
-
+            
+            return this.props.dogWalkReducer.map((doggo) =>
+                <tr key={doggo.id}>
+                    <td> {doggo.walk_date} </td>
+                    <td> {doggo.time_elapsed} </td>
+                    <td>{doggo.ones}</td>
+                    <td>{doggo.twos}</td>
+                   
+                    <td><button onClick={this.deleteButton(doggo.id)}
+                    
+                    className="deleteButton">Delete</button></td>
+                
                 </tr>
             )
         }

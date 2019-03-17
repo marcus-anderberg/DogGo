@@ -9,7 +9,10 @@ import { Link } from 'react-router-dom';
 
 
 
+
+
 const UserPage = (props) => (
+
   <>
     <div>
       <h1 id="welcome">
@@ -17,9 +20,12 @@ const UserPage = (props) => (
     </h1>
       {/* <p>Your ID is: {props.user.id}</p> */}
       {/* <LogOutButton className="log-in" /> */}
-      <Link to="/walk">
-        <img onClick={() => console.log('wooooof')} src="../images/doge2.png" className="doge" alt="" />
-      </Link>
+      {/* <Link to="/walk">
+       <img onClick={() => console.log('wooooof')} src="../images/doge2.png" className="doge" alt="" /> 
+     </Link> */}
+
+      <img src="../images/doge2.png" className="doge" alt="" />
+
 
     </div>
     <Link to="/walk">

@@ -52,4 +52,22 @@ router.post('/', (req, res) => {
         });
 });
 
+
+router.delete('/:id', (req, res) => {
+    const queryText = `DELETE FROM "item" WHERE "id"=$1;`
+    const queryValues = [
+        req.params.id
+    ];
+
+    pool.query(`DELETE FROM "item" WHERE "id"=$1;`, [req.params.id])
+        // pool.query(queryText, queryValues)
+        .then(() => { res.sendStatus(201); })
+        .catch((error) => {
+            console.log('Error completing DELETE query', error);
+            res.sendStatus(500);
+        });
+
+});
+
+
 module.exports = router;
