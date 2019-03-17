@@ -1,51 +1,46 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+
+
+
 
 // This is one of our simplest components
 // It doesn't have local state, so it can be a function component.
 // It doesn't dispatch any redux actions or display any part of redux state
 // or even care what the redux state is, so it doesn't need 'connect()'
 
-const History = () => (
-    <div>
-        <div>
-            <table>
-                <tr>
+class History extends Component {
 
-                    <th>Date</th>
-                    <th>Time</th>
-                    <th> #1s</th>
-                    <th> #2s</th>
-                    <td>Delete</td>
+    componentDidMount = () => {
+        this.props.dispatch({ type: 'GET_WALKS' })
+    }
 
-                </tr>
-                <tr>
+    // handleClick = id => () => {
+    //     console.log('id', id);
 
-                    <td>1/1/19</td>
-                    <td>01:02</td>
-                    <td>3</td>
-                    <td>2</td>
-                    <td><button>delete</button></td>
-                </tr>
-                <tr>
+    //     this.props.dispatch({ type: 'DELETE_ITEM', payload: id })
+    // }
 
-                    <td>3/3/19</td>
-                    <td>01:02</td>
-                    <td>5</td>
-                    <td>2</td>
-                    <td><button>delete</button></td>
-                </tr>
-                <tr>
+    render() {
+        console.log(this.props.dogWalkReducer.data);
 
-                    <td>3/3/19</td>
-                    <td>01:02</td>
-                    <td>6</td>
-                    <td>2</td>
-                    <td><button>delete</button></td>
-                </tr>
 
-            </table>
-        </div>
-    </div>
-);
+        return (
+            <>
+                <ul>
+                    <li>
+                        {JSON.stringify(this.props.dogWalkReducer.data)}
+                        {/* {this.props.dogWalkReducer.map((dogs) => <li key={dogs.id}> {dogs.name} / {dogs.time_elapsed} / <button onClick={this.handleClick(dogs.id)}>Delete</button> </li>)} */}
+                    </li>
+                </ul>
 
-export default History;
+            </>
+        )
+    };
+}
+
+const mapReduxStateToProps = reduxState => {
+    return reduxState;
+};
+
+export default connect(mapReduxStateToProps)(History);

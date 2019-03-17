@@ -22,7 +22,7 @@ router.get('/', (req, res) => {
 
     })
     .catch((error) => {
-        console.log('Error completing POST query', error);
+        console.log('Error completing GET query', error);
         res.sendStatus(500);
     }); 
 });
