@@ -14,12 +14,12 @@ const UserPage = (props) => (
     </h1>
       {/* <p>Your ID is: {props.user.id}</p> */}
       {/* <LogOutButton className="log-in" /> */}
-      <Link to="/info">
+      <Link to="/walk">
       <img src="../images/doge2.png" className="doge" alt="" />
       </Link>
 
     </div>
-    <Link to="/info">
+    <Link to="/walk">
     <p>Go Walking</p>
     </Link>
   </>
