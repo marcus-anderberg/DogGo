@@ -28,7 +28,7 @@ function* deleteItem(action) {
         yield axios.delete('api/dog/' + action.payload);
         yield put({ type: 'GET_WALKS' });
     } catch (error) {
-        console.log('this was an error with the delete');
+        console.log('this was an error with the delete - what up TJ');
 
     }
 }

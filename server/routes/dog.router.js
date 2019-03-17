@@ -4,11 +4,12 @@ const router = express.Router();
 const moment = require('moment');
 const momentDuration = require("moment-duration-format")
 momentDuration(moment);
+const { rejectUnauthenticated } = require('../modules/authentication-middleware');
 /**
  * GET route template
  */
-router.get('/', (req, res) => {
-    const queryText = 'SELECT "walk_date", "time_elapsed", "ones", "twos", "username" FROM "dogs" JOIN "user" ON "dogs"."user_ref_id" = "user"."id" ORDER BY "walk_date" DESC'
+router.get('/', rejectUnauthenticated, (req, res) => {
+    const queryText = 'SELECT "dogs"."id", "walk_date", "time_elapsed", "ones", "twos", "username" FROM "dogs" JOIN "user" ON "dogs"."user_ref_id" = "user"."id"'
     pool.query(queryText) 
     .then((result) => {
      for (let i = 0; i < result.rows.length; i++) {
@@ -54,12 +55,12 @@ router.post('/', (req, res) => {
 
 
 router.delete('/:id', (req, res) => {
-    const queryText = `DELETE FROM "item" WHERE "id"=$1;`
+    const queryText = `DELETE FROM "dogs" WHERE "id"=$1;`
     const queryValues = [
         req.params.id
     ];
 
-    pool.query(`DELETE FROM "item" WHERE "id"=$1;`, [req.params.id])
+    pool.query(`DELETE FROM "dogs" WHERE "id"=$1;`, [req.params.id])
         // pool.query(queryText, queryValues)
         .then(() => { res.sendStatus(201); })
         .catch((error) => {

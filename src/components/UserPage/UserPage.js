@@ -24,7 +24,7 @@ const UserPage = (props) => (
        <img onClick={() => console.log('wooooof')} src="../images/doge2.png" className="doge" alt="" /> 
      </Link> */}
 
-      <img src="../images/doge2.png" className="doge" alt="" />
+      <img onClick={() => console.log('woof')}src="../images/doge2.png" className="doge" alt="" />
 
 
     </div>
