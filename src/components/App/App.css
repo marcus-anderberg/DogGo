@@ -1,0 +1,119 @@
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    margin: 0px;
+    background-color: #9ccc65;
+    text-align: center;
+}
+
+.alert {
+  text-align: center;
+    margin: 50px;
+}
+
+form {
+    background-color: #c5e1a5;
+    width: 60%;
+    height: 250px;
+    margin: 20px auto;
+    padding: 25px;
+    border-radius: 2px;
+}
+
+input {
+    margin: 5px;
+    margin-bottom: 10px;
+    font-family: 'Roboto Mono', monospace;
+    width: 75%;
+}
+
+.log-in, .log-out, .register {
+  background-color: #7cb342;
+  border-radius: 5%;
+  color: #f8f8f8;
+  min-height: 50px;
+  min-width: 100px;
+  outline:0;
+  cursor: pointer;
+}
+
+.log-in:hover, .log-out:hover, .register:hover {
+  background-color: #9ccc65;
+}
+
+/* This line makes the "Register" and "Login" buttons look like links */
+.link-button {
+    background:none;
+    color:inherit;
+    border:none;
+    padding:0;
+    font: inherit;
+    outline:0;
+    border-bottom:1px solid #444; 
+    cursor: pointer;
+}
+
+img {
+  height: 75px;
+  margin: 50px;
+  border-radius: 50px;
+  
+}
+
+.doge {
+  box-shadow: 2px 2px 4px #000000;
+}
+
+.icon {
+  padding: 0px;
+  margin: 0px;
+  height: 30px;
+  outline: 0 none;
+}
+
+button {
+
+  font-size: 18px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: black;
+  background-color: #689f38;
+  border: none;
+  /* border-radius: 100px;
+  box-shadow: 0 4px rgb(65, 75, 68); */
+ 
+}
+
+.button:hover {background-color: #317531}
+
+button:active {
+  background-color: #33691e;
+  box-shadow: 0 3px rgb(51, 50, 50);
+  transform: translateY(4px);
+}
+
+h2 {
+  margin: 0px;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+
+  font-size: 16px;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 10px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
