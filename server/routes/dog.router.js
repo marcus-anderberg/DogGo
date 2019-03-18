@@ -9,7 +9,7 @@ const { rejectUnauthenticated } = require('../modules/authentication-middleware'
  * GET route template
  */
 router.get('/', rejectUnauthenticated, (req, res) => {
-    const queryText = 'SELECT "dogs"."id", "walk_date", "time_elapsed", "ones", "twos", "username" FROM "dogs" JOIN "user" ON "dogs"."user_ref_id" = "user"."id"'
+    const queryText = 'SELECT "dogs"."id", "walk_date", "time_elapsed", "ones", "twos", "username" FROM "dogs" JOIN "user" ON "dogs"."user_ref_id" = "user"."id" ORDER BY "id" DESC'
     pool.query(queryText) 
     .then((result) => {
      for (let i = 0; i < result.rows.length; i++) {

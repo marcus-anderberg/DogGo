@@ -10,13 +10,13 @@ class Bathroom extends Component {
 
         return (
             <div className="bathroom">
-                <Fab color="primary" aria-label="Add" onClick={this.props.handlePlus1}>
+                <Fab color="primary" size="medium" aria-label="Add" onClick={this.props.handlePlus1}>
                     <img className="icon" src="../images/hydrant.png" alt="" />
                 </Fab>
                 <h2>{this.props.countOne}</h2>
 
 
-                <Fab color="primary" aria-label="Add" onClick={this.props.handlePlus2}>
+                <Fab color="primary" size="medium" aria-label="Add" onClick={this.props.handlePlus2}>
                     <img className="icon" src="../images/poop.png" alt="" />
                 </Fab>
                 <h2>{this.props.countTwo}</h2> <br />

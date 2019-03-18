@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
+import Button from '@material-ui/core/Button';
 
 class RegisterPage extends Component {
   state = {
@@ -65,22 +66,23 @@ class RegisterPage extends Component {
             </label>
           </div>
           <div>
-            <input
-              className="register"
+            <Button
               type="submit"
               name="submit"
               value="Register"
-            />
+            > Register
+            </Button>
           </div>
         </form>
         <center>
-          <button
+          <Button
+            variant="outlined"
             type="button"
             className="link-button"
             onClick={() => {this.props.dispatch({type: 'SET_TO_LOGIN_MODE'})}}
           >
             Login
-          </button>
+          </Button>
         </center>
       </div>
     );

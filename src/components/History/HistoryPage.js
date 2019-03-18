@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import Button from '@material-ui/core/Button';
 
 
 
@@ -30,9 +31,9 @@ class History extends Component {
                     <td>{doggo.ones}</td>
                     <td>{doggo.twos}</td>
                    
-                    <td><button onClick={this.deleteButton(doggo.id)}
+                    <td><Button  onClick={this.deleteButton(doggo.id)}
                     
-                    className="deleteButton">Delete</button></td>
+                    className="deleteButton">Delete</Button></td>
                 
                 </tr>
             )

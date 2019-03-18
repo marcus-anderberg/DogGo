@@ -14,7 +14,7 @@ const UserPage = (props) => (
         Hi {props.user.username}!
     </h1>
       <Link to="/walk">
-        <p>Go Walking</p>
+        <h2>Go Walking</h2>
       </Link>
     <Doge/>
 

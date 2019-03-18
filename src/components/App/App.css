@@ -86,25 +86,16 @@ img {
 }
 
 button {
-
+  font-family: 'Roboto Mono', monospace;
   font-size: 18px;
   text-align: center;
-  cursor: pointer;
-  outline: none;
-  color: black;
-  background-color: #689f38;
-  border: none;
-  /* border-radius: 100px;
-  box-shadow: 0 4px rgb(65, 75, 68); */
  
 }
 
-.button:hover {background-color: #317531}
+a {
+  color: #f1f8e9;
+  text-decoration:none;
 
-button:active {
-  background-color: #33691e;
-  box-shadow: 0 3px rgb(51, 50, 50);
-  transform: translateY(4px);
 }
 
 h2 {
@@ -119,13 +110,13 @@ table {
 }
 
 td, th {
-  border: 1px solid #dddddd;
-  text-align: left;
+  border: 1px solid #dcedc8;
+  text-align: center;
   padding: 10px;
 }
 
 tr:nth-child(even) {
-  background-color: #dddddd;
+  background-color: #dcedc8;
 }
 
 .deleteButton {
@@ -146,3 +137,4 @@ h3 {
   margin: 0;
   padding: 0;
 }
+

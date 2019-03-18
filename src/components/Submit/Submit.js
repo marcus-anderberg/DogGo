@@ -4,6 +4,8 @@ import { withStyles } from '@material-ui/core/styles';
 import SaveIcon from '@material-ui/icons/Save';
 import Button from '@material-ui/core/Button';
 import classNames from 'classnames';
+import Fab from '@material-ui/core/Fab';
+
 
 const styles = theme => ({
     fab: {
@@ -19,10 +21,10 @@ class Submit extends Component {
         const { classes } = this.props;
         return (
             <div >
-                <Button onClick={this.props.submit} color="primary" variant="contained" size="medium" className={classes.button}>
+                <Fab onClick={this.props.submit} variant="extended" color="primary" className={classes.fab}>
                     <SaveIcon className={classNames(classes.leftIcon, classes.iconSmall)} />
                     Save
-                </Button>
+                </Fab>
             </div>
         );
     }
