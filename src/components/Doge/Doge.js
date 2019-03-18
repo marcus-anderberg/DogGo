@@ -17,7 +17,7 @@ class Doge extends Component {
      
         return (
             <div>
-                <img onClick={this.toggle} src="../images/doge2.png" className="doge" alt="" />
+                <img onClick={this.toggle} src="../images/doge2.png" className="doge" alt="" /><br/>
 
                 {this.state.on && <img src="../images/cool_doge.png" alt=""/> }
                
