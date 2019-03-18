@@ -1,4 +1,4 @@
-import { put, takeLatest } from 'redux-saga/effects';
+import { put, takeEvery } from 'redux-saga/effects';
 import axios from 'axios';
 
 // worker Saga: will be fired on "REGISTER" actions
@@ -35,9 +35,9 @@ function* deleteItem(action) {
 
 
 function* dogWalkerSaga() {
-    yield takeLatest('ADD_WALK', addWalk);
-    yield takeLatest('GET_WALKS', getWalks);
-    yield takeLatest('DELETE_ITEM', deleteItem)
+    yield takeEvery('ADD_WALK', addWalk);
+    yield takeEvery('GET_WALKS', getWalks);
+    yield takeEvery('DELETE_ITEM', deleteItem)
 }
 
 export default dogWalkerSaga;

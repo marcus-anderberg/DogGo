@@ -7,6 +7,7 @@ class Bathroom extends Component {
 
 
     render() {
+      
         return (
             <div className="bathroom">
                 <div className="left">
@@ -17,6 +18,7 @@ class Bathroom extends Component {
                     <button className=".button" onClick={this.props.handlePlus2}><img className="icon" src="../images/poop.png" alt="" /></button>
                     <h2>{this.props.countTwo}</h2> <br />
                 </div>
+              
                 
             </div>
         );
