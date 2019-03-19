@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Button from '@material-ui/core/Button';
+import Doge from '../Doge/Doge'
 
 class LoginPage extends Component {
   state = {
@@ -74,6 +75,7 @@ class LoginPage extends Component {
            
           </div>
         </form>
+        <Doge />
         <center>
           <Button
             variant="outlined"

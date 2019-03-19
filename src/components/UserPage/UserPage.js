@@ -13,15 +13,15 @@ const UserPage = (props) => (
       <h1 id="welcome">
         Hi {props.user.username}!
       </h1>
-      <h2>Your last walk was on (walk_date) </h2>
-      <br/>
+
+      <br />
       <Link to="/walk">
-        <h2>Go Walking</h2>
+        <h2>Go Walking</h2> <br />
       </Link>
-    <Doge/>
+
 
     </div>
-  
+    <iframe src="https://i.giphy.com/media/sHytgXD2vlNVC/giphy.webp" width="400" height="376" frameBorder="0"></iframe><p></p>
   </>
 );
 
