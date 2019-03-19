@@ -83,6 +83,7 @@ img {
   margin: 0px;
   height: 30px;
   outline: 0 none;
+  border-radius: 0px;
 }
 
 button {
@@ -94,7 +95,7 @@ button {
 
 a {
   color: #f1f8e9;
-  text-decoration:none;
+ 
 
 }
 

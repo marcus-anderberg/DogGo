@@ -21,7 +21,7 @@ class History extends Component {
         this.props.dispatch({ type: 'DELETE_ITEM', payload: id })
     }
 
-    doggieList() {
+    doggoList() {
         if (this.props.dogWalkReducer && this.props.dogWalkReducer.length > 0) {
             
             return this.props.dogWalkReducer.map((doggo) =>
@@ -41,7 +41,7 @@ class History extends Component {
     }
 
     render() {
-        console.log(this.props.dogWalkReducer);
+        console.log(this.props.dogWalkReducer.walk_date);
 
 
         return (
@@ -50,15 +50,15 @@ class History extends Component {
                 <table>
                     <thead>
                         <tr>
-                            <th>Date</th>
-                            <th>Time</th>
-                            <th>Ones</th>
-                            <th>Twos</th>
-                            <th>Delete</th>
+                            <th> <img className="icon" src="../images/calendar.png" alt="" /></th>
+                            <th> <img className="icon" src="../images/time.png" alt="" /></th>
+                            <th><img className="icon" src="../images/hydrant.png" alt="" /></th>
+                            <th><img className="icon" src="../images/poop.png" alt="" /></th>
+                            <th><img className="icon" src="../images/delete.png" alt="" /></th>
                         </tr>
                     </thead>
                     <tbody>
-                        {this.doggieList()}
+                        {this.doggoList()}
                     </tbody>
 
                 </table>

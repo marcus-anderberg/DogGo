@@ -12,7 +12,9 @@ const UserPage = (props) => (
     <div>
       <h1 id="welcome">
         Hi {props.user.username}!
-    </h1>
+      </h1>
+      <h2>Your last walk was on (walk_date) </h2>
+      <br/>
       <Link to="/walk">
         <h2>Go Walking</h2>
       </Link>

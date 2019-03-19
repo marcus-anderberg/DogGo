@@ -72,6 +72,11 @@ class App extends Component {
   handleSubmit = () => {
     console.log('submit!');
     this.props.dispatch({ type: 'ADD_WALK', payload: this.state });
+    this.setState({
+      countOne: 0,
+      countTwo: 0,
+      secondsElapsed: 0,
+    })
 
   }
 
