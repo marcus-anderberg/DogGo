@@ -109,10 +109,10 @@ class App extends Component {
 
 
       <MuiThemeProvider theme={theme}>
-       
+        <img src="../images/legs.png" alt="" /> 
         <div className="App">
 
-          {/* <Timer2 /> */}
+       
 
           <Fab color="primary" aria-label="Add" onClick={this.handleStartClick} className={classes.fab}>
             Go

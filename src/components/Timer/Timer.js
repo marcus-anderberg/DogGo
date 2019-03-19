@@ -10,6 +10,7 @@ class Timer extends Component {
         const { classes } = this.props;
         return (
             <div className="timer">
+           
                 <Fab color="primary" aria-label="Add" onClick={this.handleStartClick} className={classes.fab}>
                     Go
                 </Fab>

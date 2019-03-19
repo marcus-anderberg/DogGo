@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import Doge from '../Doge/Doge'
+
 
 
 
@@ -21,7 +21,7 @@ const UserPage = (props) => (
 
 
     </div>
-    <iframe src="https://i.giphy.com/media/sHytgXD2vlNVC/giphy.webp" width="400" height="376" frameBorder="0"></iframe><p></p>
+    <iframe src="https://i.giphy.com/media/sHytgXD2vlNVC/giphy.webp" width="300" height="376" frameBorder="0"></iframe>
   </>
 );
 

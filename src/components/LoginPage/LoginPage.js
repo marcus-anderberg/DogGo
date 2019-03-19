@@ -75,8 +75,9 @@ class LoginPage extends Component {
            
           </div>
         </form>
-        <Doge />
+       
         <center>
+          <Doge />
           <Button
             variant="outlined"
             type="button"

@@ -35,7 +35,7 @@ class App extends Component {
             {/* Visiting localhost:3000/about will show the about page.
             This is a route anyone can see, no login necessary */}
           
-            <Route
+            <ProtectedRoute
               exact
               path="/history"
               component={HistoryPage}
@@ -56,7 +56,7 @@ class App extends Component {
               path="/walk"
               component={WalkPage}
             />
-            <Route
+            <ProtectedRoute
               exact
               path="/map"
               component={Map}

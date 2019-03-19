@@ -33,7 +33,7 @@ class History extends Component {
                    
                     <td><Button  onClick={this.deleteButton(doggo.id)}
                     
-                    className="deleteButton">Delete</Button></td>
+                        className="deleteButton"><img className="miniIcon" src="../images/delete.png" alt="" /></Button></td>
                 
                 </tr>
             )
