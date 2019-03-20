@@ -13,7 +13,7 @@ const UserPage = (props) => (
       <h1 id="welcome">
         Hi {props.user.username}!
       </h1>
-
+       Your last walk was on props.dogWalkReducer.walk_date <br/>
       <br />
       <Link to="/walk">
         <h2>Go Walking</h2> <br />
