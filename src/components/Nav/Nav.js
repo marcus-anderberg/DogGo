@@ -21,6 +21,7 @@ const Nav = (props) => (
       
       {props.user.id && (
         <>
+        
 
           <Link className="nav-link" to="/walk">
             Walk

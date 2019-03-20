@@ -9,8 +9,10 @@ const { rejectUnauthenticated } = require('../modules/authentication-middleware'
  * GET route template
  */
 router.get('/', rejectUnauthenticated, (req, res) => {
-    const queryText = 'SELECT "dogs"."id", "walk_date", "time_elapsed", "ones", "twos", "username" FROM "dogs" JOIN "user" ON "dogs"."user_ref_id" = "user"."id" ORDER BY "id" DESC'
-    pool.query(queryText) 
+    console.log(req.user.id);
+    
+    const queryText = 'SELECT "dogs"."id", "walk_date", "time_elapsed", "ones", "twos", "username", "user_ref_id" FROM "dogs" JOIN "user" ON "dogs"."user_ref_id" = "user"."id" WHERE "user_ref_id" = $1 ORDER BY "id" DESC'
+    pool.query(queryText, [req.user.id]) 
     .then((result) => {
      for (let i = 0; i < result.rows.length; i++) {
          let time_elapsed = moment.duration(parseInt(result.rows[i].time_elapsed), 'seconds').format('hh:mm:ss')
@@ -19,7 +21,7 @@ router.get('/', rejectUnauthenticated, (req, res) => {
        
      }
      res.send(result.rows) 
-    //  console.log(result.rows)
+    //  console.log('tk', result.rows[5].username)
 
     })
     .catch((error) => {
