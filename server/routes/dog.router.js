@@ -62,7 +62,7 @@ router.delete('/:id', (req, res) => {
         req.params.id
     ];
 
-    pool.query(`DELETE FROM "dogs" WHERE "id"=$1;`, [req.params.id])
+    pool.query(queryText, queryValues)
         // pool.query(queryText, queryValues)
         .then(() => { res.sendStatus(201); })
         .catch((error) => {

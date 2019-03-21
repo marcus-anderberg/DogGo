@@ -135,3 +135,11 @@ tr:nth-child(even) {
   padding: 0;
 }
 
+.container {
+  display: flex;
+ justify-content: center;
+}
+
+.bathroom {
+  margin: 7px;
+}

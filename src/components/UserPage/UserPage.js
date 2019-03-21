@@ -14,15 +14,15 @@ class UserPage extends Component {
 
   doggoList() {
 
-    if (this.props.dogWalkReducer.length > 1) {
-      return this.props.dogWalkReducer[0].walk_date
+    if (this.props.dogWalkReducer.length > 0) {
+      return 'your last walk was on ' + this.props.dogWalkReducer[0].walk_date
     }
   }
 
 
 
   render() {
-    console.log(this.props.dogWalkReducer);
+    // console.log(this.props.dogWalkReducer);
     
     return (
       <>
@@ -30,7 +30,7 @@ class UserPage extends Component {
           <h1 id="welcome">
             Hi {this.props.user.username}!
           </h1>
-            <h3> Your last walk was on {this.doggoList()}.</h3> 
+            <h3> {this.doggoList()}</h3> 
           <br />
           <Link to="/walk">
             <h2>Go Walking</h2> <br />
@@ -38,7 +38,7 @@ class UserPage extends Component {
 
 
         </div>
-        <iframe src="https://i.giphy.com/media/sHytgXD2vlNVC/giphy.webp" width="300" height="376" frameBorder="0" title="deal with it doge" ></iframe>
+        <iframe src="https://i.giphy.com/media/sHytgXD2vlNVC/giphy.webp" width="300" height="300" frameBorder="0" title="deal with it doge" ></iframe>
       </>
     )
   }
