@@ -21,7 +21,7 @@ router.get('/', rejectUnauthenticated, (req, res) => {
        
      }
      res.send(result.rows) 
-    //  console.log('tk', result.rows[5].username)
+    //  console.log('result.rows', result.rows)
 
     })
     .catch((error) => {

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
@@ -6,29 +6,50 @@ import { Link } from 'react-router-dom';
 
 
 
-const UserPage = (props) => (
+class UserPage extends Component {
 
-  <>
-    <div>
-      <h1 id="welcome">
-        Hi {props.user.username}!
-      </h1>
-       Your last walk was on props.dogWalkReducer.walk_date <br/>
-      <br />
-      <Link to="/walk">
-        <h2>Go Walking</h2> <br />
-      </Link>
+  componentDidMount = () => {
+    this.props.dispatch({ type: 'GET_WALKS' })
+  }
 
+  doggoList() {
 
-    </div>
-    <iframe src="https://i.giphy.com/media/sHytgXD2vlNVC/giphy.webp" width="300" height="376" frameBorder="0"></iframe>
-  </>
-);
+    if (this.props.dogWalkReducer.length > 1) {
+      return this.props.dogWalkReducer[0].walk_date
+    }
+  }
 
 
-const mapStateToProps = state => ({
-  user: state.user,
-});
+
+  render() {
+    console.log(this.props.dogWalkReducer);
+    
+    return (
+      <>
+        <div>
+          <h1 id="welcome">
+            Hi {this.props.user.username}!
+          </h1>
+            <h3> Your last walk was on {this.doggoList()}.</h3> 
+          <br />
+          <Link to="/walk">
+            <h2>Go Walking</h2> <br />
+          </Link>
 
 
-export default connect(mapStateToProps)(UserPage);
+        </div>
+        <iframe src="https://i.giphy.com/media/sHytgXD2vlNVC/giphy.webp" width="300" height="376" frameBorder="0" title="deal with it doge" ></iframe>
+      </>
+    )
+  }
+
+
+}
+
+
+const mapReduxStateToProps = reduxState => {
+  return reduxState;
+};
+
+
+export default connect(mapReduxStateToProps)(UserPage);

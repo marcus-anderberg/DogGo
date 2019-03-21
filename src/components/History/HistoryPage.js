@@ -41,7 +41,7 @@ class History extends Component {
     }
 
     render() {
-        console.log(this.props.dogWalkReducer.walk_date);
+        console.log(this.props.dogWalkReducer);
 
 
         return (

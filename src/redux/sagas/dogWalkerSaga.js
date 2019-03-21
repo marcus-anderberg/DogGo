@@ -16,6 +16,7 @@ function* getWalks() {
     try {
        let dogWalkInfo = yield axios.get('api/dog')
         yield put({type: 'SET_WALKS', payload: dogWalkInfo.data})
+        // console.log(dogWalkInfo.data)
     } catch (error) {
         console.log('Error with user registration:', error);
 
@@ -28,7 +29,7 @@ function* deleteItem(action) {
         yield axios.delete('api/dog/' + action.payload);
         yield put({ type: 'GET_WALKS' });
     } catch (error) {
-        console.log('this was an error with the delete - what up TJ');
+        console.log('this was an error with the delete');
 
     }
 }
