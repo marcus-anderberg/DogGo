@@ -15,7 +15,7 @@ class UserPage extends Component {
   doggoList() {
 
     if (this.props.dogWalkReducer.length > 0) {
-      return 'your last walk was on ' + this.props.dogWalkReducer[0].walk_date
+      return 'Your last walk was on ' + this.props.dogWalkReducer[0].walk_date + '.'
     }
   }
 
