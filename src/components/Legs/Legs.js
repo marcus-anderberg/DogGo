@@ -1,29 +1,30 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
+export default class App extends Component {
+    constructor(props) {
+        super(props)
 
-class Legs extends Component {
-    state = {
-        on: false
+        this.state = {
+            messages: [<img src="../images/message.png" className="message" alt="don't forget poop bags" />, <img src="../images/message_muchready.png" className="message" alt="much ready" />, <img src="../images/message_wow.png" className="message" alt="wow" />, <img src="../images/message_treat.png" className="message" alt="treat plz" />],
+            selectedNote: null,
+            clicked: false
+        }
     }
 
-    toggle = () => {
+    handleClick = () => {
         this.setState({
-            on: !this.state.on
+            clicked: true,
+            selectedNote: this.state.messages[Math.floor(Math.random() *
+                this.state.messages.length)]
         })
     }
 
-
     render() {
-     
         return (
-            <div>
-                <img onClick={this.toggle} src="../images/legs.png" alt="doge" />
-
-                {this.state.on && <img src="../images/message.png" className="message" alt="don't forget poop bags"/> }
-               
+            <div className="App">
+                <img onClick={this.handleClick} src="../images/legs.png" className="legs"alt="doge" />
+                <span>{this.state.clicked && this.state.selectedNote}</span>
             </div>
-        );
+        )
     }
 }
-
-export default Legs;

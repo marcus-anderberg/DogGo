@@ -143,3 +143,11 @@ tr:nth-child(even) {
 .bathroom {
   margin: 7px;
 }
+
+.legs {
+  margin-right: 0;
+}
+
+.message {
+  border-radius:0px;
+}
