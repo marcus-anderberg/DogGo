@@ -151,3 +151,8 @@ tr:nth-child(even) {
 .message {
   border-radius:0px;
 }
+
+.title {
+  font-size: 50px;
+  font-weight: bold;
+}
