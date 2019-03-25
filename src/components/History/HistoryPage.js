@@ -23,18 +23,18 @@ class History extends Component {
 
     doggoList() {
         if (this.props.dogWalkReducer && this.props.dogWalkReducer.length > 0) {
-            
+
             return this.props.dogWalkReducer.map((doggo) =>
                 <tr key={doggo.id}>
                     <td> {doggo.walk_date} </td>
                     <td> {doggo.time_elapsed} </td>
                     <td>{doggo.ones}</td>
                     <td>{doggo.twos}</td>
-                   
-                    <td><Button  onClick={this.deleteButton(doggo.id)}
-                    
+
+                    <td><Button onClick={this.deleteButton(doggo.id)}
+
                         className="deleteButton"><img className="miniIcon" src="../images/delete.png" alt="" /></Button></td>
-                
+
                 </tr>
             )
         }
