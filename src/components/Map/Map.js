@@ -48,7 +48,7 @@ class MapContainer extends Component {
       return null;
     }
 
-    return <Map google={google} initialCenter={userLocation} zoom={15} />;
+    return <Map google={google} initialCenter={userLocation} zoom={16} />;
 
   }
 }

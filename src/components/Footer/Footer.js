@@ -8,7 +8,7 @@ import './Footer.css'
 
 const Footer = () => (
   <footer>
- 
+    <p className="copyright">Design By Marcus &copy; 2019</p>
   </footer>
 );
 

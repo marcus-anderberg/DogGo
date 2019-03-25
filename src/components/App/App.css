@@ -156,3 +156,7 @@ tr:nth-child(even) {
   font-size: 50px;
   font-weight: bold;
 }
+
+.copyright {
+  font-size: .8rem;
+}
