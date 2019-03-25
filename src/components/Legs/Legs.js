@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 
-class Doge extends Component {
+class Legs extends Component {
     state = {
         on: false
     }
@@ -17,13 +17,13 @@ class Doge extends Component {
      
         return (
             <div>
-                <img onClick={this.toggle} src="../images/doge2.png" className="doge" alt="doge" />
+                <img onClick={this.toggle} src="../images/legs.png" alt="doge" />
 
-                {this.state.on && <img src="../images/cool_doge.png" alt="cool doge"/> }
+                {this.state.on && <img src="../images/message.png" className="message" alt="don't forget poop bags"/> }
                
             </div>
         );
     }
 }
 
-export default Doge;
+export default Legs;

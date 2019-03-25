@@ -5,6 +5,7 @@ import Fab from '@material-ui/core/Fab';
 import { withStyles } from '@material-ui/core/styles';
 import Submit from '../Submit/Submit'
 import Bathroom from '../Bathroom/Bathroom'
+import Legs from '../Legs/Legs'
 
 
 
@@ -109,7 +110,8 @@ class App extends Component {
 
 
       <MuiThemeProvider theme={theme}>
-        <img src="../images/legs.png" alt="" /> 
+        <Legs/>
+        
         <div className="App">
 
        
