@@ -37,7 +37,7 @@ const sideDrawer = props => {
           <LogOutButton className="logOutButton" />
         </li>
         <li>
-          <img src="../images/doge_icon.png" className="message" alt="cool doge" />
+          <img src="../images/doge_icon.png" className="sideBarDoge" alt="cool doge" />
         </li>
      
       </ul>
