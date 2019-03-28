@@ -6,8 +6,8 @@ class MapContainer extends Component {
 
   state = {
     userLocation: {
-      lat: 45,
-      lng: -45,
+      lat: 44.9778,
+      lng: -93.2650,
     },
     loading: true
   };
@@ -54,5 +54,5 @@ class MapContainer extends Component {
 }
 
 export default GoogleApiWrapper({
-  apiKey: "AIzaSyDf4NU_rGOmsUaQj0HVAQsV2Uxb0xieWY0"
+  apiKey: "AIzaSyA8i6_7n7we7V-mKltoBbuM9lbIqgvxxY0"
 })(MapContainer);

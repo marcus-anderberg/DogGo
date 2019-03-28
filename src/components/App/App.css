@@ -17,10 +17,11 @@ body {
 form {
   background-color: #c5e1a5;
   width: 60%;
-  height: 275px;
+  height: 300px;
   margin: 20px auto;
   padding: 25px;
   border-radius: 20px;
+  font-size: 1.2rem;
 }
 
 input {
@@ -32,6 +33,7 @@ input {
   border: none;
   border-bottom: 1px solid black;
   outline: none;
+  font-size: 1.5rem;
 }
 
 .log-in, .log-out, .register {
@@ -94,6 +96,7 @@ img {
   height: 20px;
   outline: 0 none;
   border-radius: 0px;
+
 }
 
 button {
@@ -117,6 +120,8 @@ table {
   border-collapse: collapse;
   width: 100%;
   font-size: 16px;
+
+
 }
 
 td, th {
@@ -131,6 +136,7 @@ td {
 
 tr:nth-child(even) {
   background-color: #dcedc8;
+
 }
 
 #map {
@@ -178,3 +184,4 @@ tr:nth-child(even) {
 .space {
   padding: 25px;
 }
+

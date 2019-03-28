@@ -78,6 +78,7 @@ class App extends Component {
       countTwo: 0,
       secondsElapsed: 0,
     })
+    clearInterval(this.incrementer);
   }
 
  handleNextClick = () => {
@@ -144,9 +145,7 @@ class App extends Component {
           </Router> */}
           <div className="space"></div>
 
-          <Fab color="primary" aria-label="Add" onClick={this.handleNextClick} className={classes.fab}>
-            Next
-            </Fab>
+       
 
 
         </div>
