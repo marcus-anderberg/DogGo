@@ -17,10 +17,10 @@ body {
 form {
   background-color: #c5e1a5;
   width: 60%;
-  height: 250px;
+  height: 275px;
   margin: 20px auto;
   padding: 25px;
-  border-radius: 2px;
+  border-radius: 20px;
 }
 
 input {
@@ -28,6 +28,10 @@ input {
   margin-bottom: 10px;
   font-family: 'Roboto Mono', monospace;
   width: 75%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid black;
+  outline: none;
 }
 
 .log-in, .log-out, .register {
@@ -66,13 +70,14 @@ input {
 }
 
 img {
-  height: 100px;
+  height: 90px;
   margin: 20px;
-  border-radius: 50px; 
+ 
 }
 
 .doge {
   box-shadow: 2px 2px 4px #000000;
+  border-radius: 50px;
 }
 
 .icon {
@@ -154,7 +159,7 @@ tr:nth-child(even) {
 
 .title {
   font-size: 50px;
-  font-weight: bold;
+  margin-bottom: 10px;
 }
 
 .copyright {
@@ -164,4 +169,12 @@ tr:nth-child(even) {
 .sideBarDoge {
   border-radius:0px;
   height: 50px;
+}
+
+.registerUser {
+  margin-bottom: 10px;
+}
+
+.space {
+  padding: 25px;
 }

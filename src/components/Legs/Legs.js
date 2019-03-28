@@ -5,7 +5,7 @@ export default class App extends Component {
         super(props)
 
         this.state = {
-            messages: [<img src="../images/message.png" className="message" alt="don't forget poop bags" />, <img src="../images/message_muchready.png" className="message" alt="much ready" />, <img src="../images/message_wow.png" className="message" alt="wow" />, <img src="../images/message_treat.png" className="message" alt="treat plz" />, ''],
+            messages: [<img src="../images/message.png" className="message" alt="don't forget poop bags" />, <img src="../images/message_wow.png" className="message" alt="wow" />, <img src="../images/message_treat.png" className="message" alt="treat plz" />,<img src="../images/message_goodboy.png" className="message" alt="good boy" />,<img src="../images/message_suchready.png" className="message" alt="such ready" />, ''],
             selectedNote: null,
             clicked: false
         }

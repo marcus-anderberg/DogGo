@@ -68,6 +68,7 @@ class LoginPage extends Component {
           </div>
           <div>
             <Button
+              variant="outlined"
               type="submit"
               name="submit">
               LogIn

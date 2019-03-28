@@ -78,8 +78,12 @@ class App extends Component {
       countTwo: 0,
       secondsElapsed: 0,
     })
-
   }
+
+ handleNextClick = () => {
+   this.props.history.push('/history');
+
+ }
 
   handleStartClick = () => {
     this.incrementer = setInterval(() => {
@@ -138,6 +142,11 @@ class App extends Component {
             <Route path="/History" component={History} />
             </div>
           </Router> */}
+          <div className="space"></div>
+
+          <Fab color="primary" aria-label="Add" onClick={this.handleNextClick} className={classes.fab}>
+            Next
+            </Fab>
 
 
         </div>
