@@ -38,7 +38,7 @@ class UserPage extends Component {
 
 
         </div>
-        <iframe src="https://i.giphy.com/media/sHytgXD2vlNVC/giphy.webp" width="300" height="300" frameBorder="0" title="deal with it doge" ></iframe>
+        <img src="../images/ezgif.gif" className="dealWithIt" alt="deal with it doge" />
       </>
     )
   }

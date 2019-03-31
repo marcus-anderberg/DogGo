@@ -225,3 +225,7 @@ tr:nth-child(even) {
 .weatherIcon {
   padding: 15px;
 }
+
+.dealWithIt {
+  height: 250px;
+}

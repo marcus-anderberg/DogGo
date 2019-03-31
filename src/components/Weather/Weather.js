@@ -11,7 +11,6 @@ class Weather extends Component {
   componentDidMount() {
     fetchJsonp(
       "https://api.darksky.net/forecast/" +
-      +
         "/44.6062,-93.3321?exclude=hourly,minutely,currently"
     )
       .then(function(response) {
