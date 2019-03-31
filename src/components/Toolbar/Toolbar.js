@@ -14,29 +14,35 @@ const toolbar = props => (
       <div className="spacer" />
       <div className="toolbar_navigation-items">
         <ul>
-          <li> <Link className="nav-link" to="/home">
-            Home</Link>
+          <li>
+            {" "}
+            <Link className="nav-link" to="/home">
+              Home
+            </Link>
           </li>
           <li>
             <Link className="nav-link" to="/walk">
-            Walk
-           </Link>
+              Walk
+            </Link>
           </li>
           <li>
             <Link className="nav-link" to="/history">
-            History
-           </Link>
+              History
+            </Link>
           </li>
           <li>
             <Link className="nav-link" to="/map">
-           Map
-           </Link>
+              Map
+            </Link>
+          </li>
+          <li>
+            <Link className="nav-link" to="/weather">
+              Weather
+            </Link>
           </li>
           <li>
             <LogOutButton className="nav-link" />
-            </li>
-
-          
+          </li>
         </ul>
       </div>
     </nav>

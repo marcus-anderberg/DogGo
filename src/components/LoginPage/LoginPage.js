@@ -35,14 +35,17 @@ class LoginPage extends Component {
     return (
       <div>
         {this.props.errors.loginMessage && (
-          <h2
-            className="alert"
-            role="alert"
-          >
+          <h2 className="alert" role="alert">
             {this.props.errors.loginMessage}
           </h2>
         )}
         <form onSubmit={this.login}>
+          <img
+            src="../images/doge_icon.png"
+            className="sideBarDoge"
+            alt="cool doge"
+          />
+
           <h1 className="title">Dog Go!</h1>
           <div>
             <label htmlFor="username">
@@ -51,7 +54,7 @@ class LoginPage extends Component {
                 type="text"
                 name="username"
                 value={this.state.username}
-                onChange={this.handleInputChangeFor('username')}
+                onChange={this.handleInputChangeFor("username")}
               />
             </label>
           </div>
@@ -62,28 +65,25 @@ class LoginPage extends Component {
                 type="password"
                 name="password"
                 value={this.state.password}
-                onChange={this.handleInputChangeFor('password')}
+                onChange={this.handleInputChangeFor("password")}
               />
             </label>
           </div>
           <div>
-            <Button
-              variant="outlined"
-              type="submit"
-              name="submit">
+            <Button variant="outlined" type="submit" name="submit">
               LogIn
             </Button>
-           
           </div>
         </form>
-       
+
         <center>
-          <Doge />
           <Button
             variant="outlined"
             type="button"
             className="link-button"
-            onClick={() => {this.props.dispatch({type: 'SET_TO_REGISTER_MODE'})}}
+            onClick={() => {
+              this.props.dispatch({ type: "SET_TO_REGISTER_MODE" });
+            }}
           >
             Register
           </Button>

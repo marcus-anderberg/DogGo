@@ -21,7 +21,7 @@ export default class App extends Component {
 
     render() {
         return (
-            <div className="App">
+            <div className="Legs">
                 <img onClick={this.handleClick} src="../images/legs.png" className="legs"alt="doge" />
                 <span>{this.state.clicked && this.state.selectedMessage}</span>
             </div>

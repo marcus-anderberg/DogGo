@@ -35,14 +35,16 @@ class RegisterPage extends Component {
     return (
       <div>
         {this.props.errors.registrationMessage && (
-          <h2
-            className="alert"
-            role="alert"
-          >
+          <h2 className="alert" role="alert">
             {this.props.errors.registrationMessage}
           </h2>
         )}
         <form onSubmit={this.registerUser}>
+          <img
+            src="../images/doge_icon.png"
+            className="sideBarDoge"
+            alt="cool doge"
+          />
           <h1 className="registerUser">Register User</h1>
           <div>
             <label htmlFor="username">
@@ -51,7 +53,7 @@ class RegisterPage extends Component {
                 type="text"
                 name="username"
                 value={this.state.username}
-                onChange={this.handleInputChangeFor('username')}
+                onChange={this.handleInputChangeFor("username")}
               />
             </label>
           </div>
@@ -62,7 +64,7 @@ class RegisterPage extends Component {
                 type="password"
                 name="password"
                 value={this.state.password}
-                onChange={this.handleInputChangeFor('password')}
+                onChange={this.handleInputChangeFor("password")}
               />
             </label>
           </div>
@@ -72,17 +74,20 @@ class RegisterPage extends Component {
               type="submit"
               name="submit"
               value="Register"
-            > Register
+            >
+              {" "}
+              Register
             </Button>
           </div>
         </form>
         <center>
-          <Doge />
           <Button
             variant="outlined"
             type="button"
             className="link-button"
-            onClick={() => {this.props.dispatch({type: 'SET_TO_LOGIN_MODE'})}}
+            onClick={() => {
+              this.props.dispatch({ type: "SET_TO_LOGIN_MODE" });
+            }}
           >
             Login
           </Button>

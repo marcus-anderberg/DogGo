@@ -16,7 +16,7 @@ router.get('/', rejectUnauthenticated, (req, res) => {
     .then((result) => {
      for (let i = 0; i < result.rows.length; i++) {
         
-        let time_elapsed = moment.duration(parseInt(result.rows[i].time_elapsed), 'seconds').format('hh:mm:ss')
+        let time_elapsed = moment.duration(parseInt(result.rows[i].time_elapsed), 'seconds').format('h:mm:ss')
          result.rows[i] = { ...result.rows[i], walk_date: moment(result.rows[i].walk_date).format("M/DD"), time_elapsed: time_elapsed}
        
      }

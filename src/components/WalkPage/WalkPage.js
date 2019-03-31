@@ -26,15 +26,10 @@ const theme = createMuiTheme({
   },
   typography: {
     fontFamily: [
-      '-apple-system',
       'Roboto Mono',
-      '"Segoe UI"',
-      'Roboto',
-      '"Helvetica Neue"',
-      'Arial',
       'sans-serif',
     ].join(','),
-    fontSize: '13',
+    fontSize: '18',
     useNextVariants: true,
   },
 });
@@ -111,23 +106,42 @@ class App extends Component {
   render() {
     const { classes } = this.props;
     return (
-
-
-
       <MuiThemeProvider theme={theme}>
-        <Legs/>
-        
-        <div className="App">
+        <Legs />
 
-       
-
-          <Fab color="primary" aria-label="Add" onClick={this.handleStartClick} className={classes.fab}>
+        <div className="Walk">
+          <Fab
+            style={{
+              maxWidth: "75px",
+              maxHeight: "75px",
+              minWidth: "75px",
+              minHeight: "75px"
+            }}
+            color="primary"
+            aria-label="Add"
+            onClick={this.handleStartClick}
+            className={classes.fab}
+          >
             Go
-            </Fab>
-          <Fab color="primary" size="large" aria-label="Add" onClick={this.handleStopClick} className={classes.fab}>
+          </Fab>
+          <Fab
+            style={{
+              maxWidth: "75px",
+              maxHeight: "75px",
+              minWidth: "75px",
+              minHeight: "75px"
+            }}
+            color="primary"
+            size="large"
+            aria-label="Add"
+            onClick={this.handleStopClick}
+            className={classes.fab}
+          >
             Stop
-            </Fab>
-          <h1>{this.getMinutes()}:{this.getSeconds()}</h1>
+          </Fab>
+          <h1>
+            {this.getMinutes()}:{this.getSeconds()}
+          </h1>
 
           <Bathroom
             countOne={this.state.countOne}
@@ -143,18 +157,9 @@ class App extends Component {
             <Route path="/History" component={History} />
             </div>
           </Router> */}
-          <div className="space"></div>
-
-       
-
-
+          <div className="space" />
         </div>
       </MuiThemeProvider>
-
-
-
-
-
     );
   }
 }

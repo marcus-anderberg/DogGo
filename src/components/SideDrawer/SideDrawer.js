@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import LogOutButton from '../LogOutButton/LogOutButton';
+import Doge from '../Doge/Doge'
 
 import './SideDrawer.css';
 
@@ -14,32 +15,29 @@ const sideDrawer = props => {
     <nav className={drawerClasses}>
       <ul>
         <li>
-        <Link to="/home">
-          Home
-        </Link>
+          <Link to="/home">Home</Link>
         </li>
         <li>
-          <Link to="/walk">
-            Walk
-          </Link>
+          <Link to="/walk">Walk</Link>
         </li>
         <li>
-          <Link to="/history">
-             History
-          </Link>
+          <Link to="/history">History</Link>
         </li>
         <li>
-          <Link to="/map">
-           Map
-           </Link>
+          <Link to="/map">Map</Link>
+        </li>
+        <li>
+          <Link to="/weather">Weather</Link>
         </li>
         <li>
           <LogOutButton className="logOutButton" />
         </li>
-        <li>
+        {/* <li>
           <img src="../images/doge_icon.png" className="sideBarDoge" alt="cool doge" />
+        </li> */}
+        <li>
+          <Doge />
         </li>
-     
       </ul>
     </nav>
   );

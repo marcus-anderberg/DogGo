@@ -16,6 +16,7 @@ import HistoryPage from "../History/HistoryPage";
 import UserPage from "../UserPage/UserPage";
 import WalkPage from "../WalkPage/WalkPage";
 import Map from "../Map/Map";
+import Weather from '../Weather/Weather'
 
 import "./App.css";
 
@@ -45,6 +46,7 @@ class App extends Component {
             they will see the info page instead. */}
             <ProtectedRoute exact path="/walk" component={WalkPage} />
             <ProtectedRoute exact path="/map" component={Map} />
+            <ProtectedRoute exact path="/weather" component={Weather} />
             {/* If none of the other routes matched, we will show a 404. */}
             <Route render={() => <h1>404</h1>} />
           </Switch>

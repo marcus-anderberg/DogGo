@@ -33,7 +33,7 @@ input {
   border: none;
   border-bottom: 1px solid black;
   outline: none;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 .log-in, .log-out, .register {
@@ -45,7 +45,6 @@ input {
   outline:0;
   cursor: pointer;
   padding: 1px;
-  border-radius: 50px;
   box-shadow: 0 4px rgb(65, 75, 68);
 }
 
@@ -80,6 +79,7 @@ img {
 .doge {
   box-shadow: 2px 2px 4px #000000;
   border-radius: 50px;
+  height: 75px;
 }
 
 .icon {
@@ -164,8 +164,9 @@ tr:nth-child(even) {
 }
 
 .title {
-  font-size: 50px;
-  margin-bottom: 10px;
+  font-size: 40px;
+  margin-bottom:  10px;
+  margin-top: 0;
 }
 
 .copyright {
@@ -175,9 +176,12 @@ tr:nth-child(even) {
 .sideBarDoge {
   border-radius:0px;
   height: 50px;
+  margin: 0;
+  padding: 0;
 }
 
 .registerUser {
+  margin-top: 0px;
   margin-bottom: 10px;
 }
 
@@ -185,3 +189,39 @@ tr:nth-child(even) {
   padding: 25px;
 }
 
+
+
+.flexContainer {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.weatherTile {
+  background-color: #c5e1a5;
+  padding: 10px;
+  margin: 15px;
+  font-size: 1.2em;
+  width: 300px;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.temperature {
+  font-size: 1.5em;
+  margin: 0;
+}
+
+.temperatureLabel {
+  margin: 0;
+  color: #474c4c;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.date {
+  color: #474c4c;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.weatherIcon {
+  padding: 15px;
+}
