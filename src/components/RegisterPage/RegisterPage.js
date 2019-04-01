@@ -45,7 +45,7 @@ class RegisterPage extends Component {
             className="sideBarDoge"
             alt="cool doge"
           />
-          <h1 className="registerUser">Register User</h1>
+          <h1 className="registerUser">Register</h1>
           <div>
             <label htmlFor="username">
               Username:

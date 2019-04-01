@@ -9,7 +9,14 @@ import { Link } from 'react-router-dom';
 class UserPage extends Component {
 
   componentDidMount = () => {
-    this.props.dispatch({ type: 'GET_WALKS' })
+    this.props.dispatch({ type: 'GET_WALKS' });
+    navigator.geolocation.getCurrentPosition(
+      position => {
+        const { latitude, longitude } = position.coords;
+        this.props.dispatch({type : 'SET_LOCATION', payload : {lat : latitude, lng: longitude}})
+        
+      }
+    );
   }
 
   doggoList() {

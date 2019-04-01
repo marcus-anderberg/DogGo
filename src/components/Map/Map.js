@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { GoogleApiWrapper, Map } from "google-maps-react";
+import { GoogleApiWrapper, Map , Marker } from "google-maps-react";
 
 class MapContainer extends Component {
 
@@ -48,10 +48,27 @@ class MapContainer extends Component {
       return null;
     }
 
-    return <Map google={google} initialCenter={userLocation} zoom={16} />;
+    return (
+      <Map google={google} initialCenter={userLocation} zoom={16}>
+        <Marker
+          name={"Your Location"}
+          position={{
+            lat: this.state.userLocation.lat,
+            lng: this.state.userLocation.lng
+          }}
+          icon={{
+            url:
+              "../images/marker.png",
+              scaledSize: new google.maps.Size(50,64)
+          }}
+        />
+      </Map>
+    );
 
   }
 }
+
+
 
 export default GoogleApiWrapper({
   apiKey: "AIzaSyA8i6_7n7we7V-mKltoBbuM9lbIqgvxxY0"

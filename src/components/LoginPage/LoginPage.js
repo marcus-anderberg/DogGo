@@ -9,6 +9,10 @@ class LoginPage extends Component {
     password: '',
   };
 
+  componentDidMount() {
+    this.props.history.push("/home");
+  }
+
   login = (event) => {
     event.preventDefault();
 
@@ -32,6 +36,7 @@ class LoginPage extends Component {
   }
 
   render() {
+    
     return (
       <div>
         {this.props.errors.loginMessage && (

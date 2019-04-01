@@ -11,7 +11,7 @@ class WeatherTileList extends Component {
     );
   }
 
-  renderWeatherTile({summary, temperatureMax, time}) {
+  renderWeatherTile = ({summary, temperatureMax, time}) => {
     return (
       <div key={time} className="weatherTile">
         <p className="date">{new Date(time * 1000).toDateString()}</p>

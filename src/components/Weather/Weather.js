@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
 import WeatherTileList from './WeatherTileList';
 import fetchJsonp from "fetch-jsonp";
 
@@ -8,35 +9,50 @@ class Weather extends Component {
     weatherByDay: []
   };
 
+  // componentDidMount() {
+  //   this.props.dispatch("GET_LOCATION");
+
+  // }
+
   componentDidMount() {
-    fetchJsonp(
-      "https://api.darksky.net/forecast/" +
-        "/44.6062,-93.3321?exclude=hourly,minutely,currently"
-    )
-      .then(function(response) {
-        return response.json();
-      })
-      .then(
-        function(json) {
-          this.setState({ 
-              weatherByDay: json.daily.data 
+    if (this.props.weatherReducer !== {}) {
+      const apiUrl =
+        "https://api.darksky.net/forecast/" +
+        "b21fd5ba8293e8d03f925a5080890bcb/" +
+        this.props.weatherReducer.lat +
+        "," +
+        this.props.weatherReducer.lng +
+        "?exclude=hourly,minutely,currently";
+      fetchJsonp(apiUrl)
+        .then(function(response) {
+          return response.json();
+        })
+        .then(
+          function(json) {
+            this.setState({
+              weatherByDay: json.daily.data
             });
-        }.bind(this)
-      )
-      .catch(function(ex) {
-        console.log("parsing failed", ex);
-      });
+          }.bind(this)
+        )
+        .catch(function(ex) {
+          console.log("parsing failed", ex);
+        });
+    }
   }
 
   render() {
     return (
       <div className="Weather">
-     
-        <WeatherTileList weather={this.state.weatherByDay} />
-   
+        {this.state.weatherByDay !== 0 && (
+          <WeatherTileList weather={this.state.weatherByDay} />
+        )}
       </div>
     );
   }
 }
 
-export default Weather;
+const mapReduxStateToProps = reduxState => {
+  return reduxState;
+};
+
+export default connect(mapReduxStateToProps)(Weather);
