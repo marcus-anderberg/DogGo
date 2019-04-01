@@ -59,7 +59,7 @@ class MapContainer extends Component {
           icon={{
             url:
               "../images/marker.png",
-              scaledSize: new google.maps.Size(50,64)
+              scaledSize: new google.maps.Size(34,64)
           }}
         />
       </Map>
