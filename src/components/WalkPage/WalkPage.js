@@ -107,7 +107,7 @@ class App extends Component {
     const { classes } = this.props;
     return (
       <MuiThemeProvider theme={theme}>
-        <Legs />
+    
 
         <div className="Walk">
           <Fab
